@@ -1,21 +1,44 @@
 import './App.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPenNib, faCode, faGear } from '@fortawesome/free-solid-svg-icons'
 
 const works = [
-		{
-				category: 'Product / UI',
-				title: 'パネルン',
-				text: '店舗向けパネル管理システムのUI設計・フロント実装。',
-		},
-		{
-				category: 'Admin UI',
-				title: '管理画面デザイン',
-				text: 'お問い合わせ、並び替え、モーダルなど運用しやすい管理画面を制作。',
-		},
-		{
-				category: 'App / Side Project',
-				title: '令和どうぶつ占い',
-				text: 'React/Viteで制作した診断アプリ。',
-		},
+	{
+		category: 'Product / UI',
+		title: 'パネルン',
+		text: '店舗向けパネル管理システムのUI設計・フロント実装。',
+	},
+	{
+		category: 'Admin UI',
+		title: '管理画面デザイン',
+		text: 'お問い合わせ、並び替え、モーダルなど運用しやすい管理画面を制作。',
+	},
+	{
+		category: 'App / Side Project',
+		title: '令和どうぶつ占い',
+		text: 'React/Viteで制作した診断アプリ。',
+	},
+]
+
+const services = [
+	{
+		icon: faPenNib,
+		title: 'UI / UX Design',
+		label: '管理画面設計・UI改善',
+		text: '管理画面や店舗向けシステムを中心に、実際の運用を想定した使いやすいUI設計を行います。',
+	},
+	{
+		icon: faCode,
+		title: 'Frontend',
+		label: 'React / JavaScript / Animation',
+		text: 'React、JavaScript、CSSを使用し、モーダル・並び替え・動きのあるUIなどを実装します。',
+	},
+	{
+		icon: faGear,
+		title: 'Product Design',
+		label: 'サービス設計・運用改善',
+		text: '見た目だけでなく、導線や更新性、運用のしやすさまで考えたプロダクト制作を行います。',
+	},
 ]
 
 function App() {
@@ -39,9 +62,7 @@ function App() {
 				<video className="heroVideo" autoPlay muted loop playsInline>
 					<source src="/kv.mp4" type="video/mp4" />
 				</video>
-
 				<div className="heroOverlay"></div>
-
 				<div className="heroContent">
 					<p className="hero_label">Web Portfolio</p>
 					<h1 className="hero_title">
@@ -53,6 +74,23 @@ function App() {
 						管理画面・Webサイト・UI設計を中心に、
 						使いやすく伝わりやすい画面づくりを行っています。
 					</p>
+				</div>
+			</section>
+
+			<section className="service fadeIn" id="service">
+				<h2 className="section_title">Service</h2>
+
+				<div className="service_grid">
+					{services.map((service) => (
+					<article className="service_card" key={service.title}>
+						<div className="service_icon">
+							<FontAwesomeIcon icon={service.icon} />
+						</div>
+						<h3>{service.title}</h3>
+						<p className="service_label">{service.label}</p>
+						<p className="service_text">{service.text}</p>
+					</article>
+					))}
 				</div>
 			</section>
 
