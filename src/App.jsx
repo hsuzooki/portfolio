@@ -21,11 +21,6 @@ const works = [
 function App() {
 	return (
 		<main className="portfolio">
-			<div className="bgAnimation">
-				<span className="bgCircle bgCircle01"></span>
-				<span className="bgCircle bgCircle02"></span>
-				<span className="bgCircle bgCircle03"></span>
-			</div>
 
 			<header className="siteHeader">
 					<a href="#" className="siteLogo">
