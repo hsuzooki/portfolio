@@ -35,18 +35,25 @@ function App() {
 					</nav>
 			</header>
 
-			<section className="hero fadeIn">
+			<section className="hero">
+				<video className="heroVideo" autoPlay muted loop playsInline>
+					<source src="/kv.mp4" type="video/mp4" />
+				</video>
+
+				<div className="heroOverlay"></div>
+
+				<div className="heroContent">
 					<p className="hero_label">Web Portfolio</p>
-
 					<h1 className="hero_title">
-							Web Design<br />
-							Frontend<br />
-							UI Design
+						Web Design<br />
+						Frontend<br />
+						UI Design
 					</h1>
-
 					<p className="hero_text">
-							管理画面・Webサイト・UI設計を中心に、使いやすく伝わりやすい画面づくりを行っています。
+						管理画面・Webサイト・UI設計を中心に、
+						使いやすく伝わりやすい画面づくりを行っています。
 					</p>
+				</div>
 			</section>
 
 			<section className="works fadeIn" id="works">

@@ -74,6 +74,16 @@ img {
 	opacity: .5;
 }
 
+
+
+
+
+
+
+
+
+
+
 /* --------------------
  hero
 -------------------- */
@@ -299,4 +309,33 @@ img {
 	.work_image {
 		height: 180px;
 	}
+}
+
+.hero {
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	padding: 0 8vw;
+	overflow: hidden;
+}
+
+.heroVideo {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.heroOverlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(0,0,0,.45);
+}
+
+.heroContent {
+	position: relative;
+	z-index: 2;
+	color: #fff;
 }
