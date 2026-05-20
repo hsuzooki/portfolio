@@ -4,19 +4,24 @@ import { faPenNib, faCode, faGear } from '@fortawesome/free-solid-svg-icons'
 
 const works = [
 	{
-		category: 'Product / UI',
-		title: 'パネルン',
-		text: '店舗向けパネル管理システムのUI設計・フロント実装。',
+		categories: ['LOGO', 'DESIGN', 'HTML/CSS'],
+		title: 'MOSHIMOSHIBOOKING',
+		image: '/images/works/logo_moshimoshibooking.png',
 	},
 	{
-		category: 'Admin UI',
-		title: '管理画面デザイン',
-		text: 'お問い合わせ、並び替え、モーダルなど運用しやすい管理画面を制作。',
+		categories: ['LOGO'],
+		title: 'GEE STYLE',
+		image: '/images/works/logo_geestyle.png',
 	},
 	{
-		category: 'App / Side Project',
-		title: '令和どうぶつ占い',
-		text: 'React/Viteで制作した診断アプリ。',
+		categories: ['LOGO', 'DESIGN', 'HTML/CSS'],
+		title: 'CBD GARDEN',
+		image: '/images/works/logo_cbdgarden.jpg',
+	},
+	{
+		categories: ['LOGO', 'DESIGN', 'HTML/CSS'],
+		title: 'VIVO',
+		image: '/images/works/logo_vivo.png',
 	},
 ]
 
@@ -46,16 +51,15 @@ function App() {
 		<main className="portfolio">
 
 			<header className="siteHeader">
-					<a href="#" className="siteLogo">
-							Hiroaki Suzuki
-					</a>
-
-					<nav className="siteNav">
-							<a href="#works">Works</a>
-							<a href="#about">About</a>
-							<a href="#skills">Skills</a>
-							<a href="#contact">Contact</a>
-					</nav>
+				<a href="#" className="siteLogo">
+					H//S
+				</a>
+				<nav className="siteNav">
+					<a href="#works">Works</a>
+					<a href="#about">About</a>
+					<a href="#skills">Skills</a>
+					<a href="#contact">Contact</a>
+				</nav>
 			</header>
 
 			<section className="hero">
@@ -77,7 +81,7 @@ function App() {
 				</div>
 			</section>
 
-			<section className="service fadeIn" id="service">
+			<section id="service" className="service fadeIn">
 				<h2 className="section_title">Service</h2>
 
 				<div className="service_grid">
@@ -94,24 +98,24 @@ function App() {
 				</div>
 			</section>
 
-			<section className="works fadeIn" id="works">
-					<h2 className="section_title">Works</h2>
-
-					<div className="work_grid">
-							{works.map((work) => (
-									<article className="work_card" key={work.title}>
-											<div className="work_image">
-													<span>{work.title}</span>
-											</div>
-
-											<div className="work_body">
-													<p className="work_category">{work.category}</p>
-													<h3>{work.title}</h3>
-													<p>{work.text}</p>
-											</div>
-									</article>
-							))}
-					</div>
+			<section id="works" className="works fadeIn">
+				<h2 className="section_title">Works</h2>
+				<ul className="works_lists">
+					{works.map((work) => (
+						<li className="works_list" key={work.title}>
+							<div className="works_thumbnail">
+								<img src={work.image} className="works_image" alt={work.title} />
+							</div>
+							<ul className="works_category_lists">
+								{work.categories.map((category) => (
+									<li className="works_category_list" key={category}>
+										{category}
+									</li>
+								))}
+							</ul>
+						</li>
+					))}
+				</ul>
 			</section>
 
 			<section className="about fadeIn" id="about">
