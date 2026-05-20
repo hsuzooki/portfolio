@@ -12,10 +12,7 @@ html {
 
 body {
 	color: #111111;
-	font-family:
-		"Helvetica Neue",
-		Arial,
-		sans-serif;
+	font-family: "Helvetica Neue", Arial, sans-serif;
 	line-height: 1.7;
 }
 
@@ -146,6 +143,7 @@ img {
 	overflow: hidden;
 	position: relative;
 	border: 1px solid #ddd;
+	border-radius: 1px;
 	margin-bottom: 6px;
 }
 #works .works_image {
@@ -333,62 +331,39 @@ img {
 .service {
 	padding: 80px 8vw;
 }
-
-.service_grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 24px;
+#service .service_lists {
+	display: flex;
+	flex-wrap: wrap;
 }
-
-.service_card {
-	position: relative;
-	min-height: 320px;
+#service .service_list {
+	width: calc(100% / 3 - 15px);
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 1px;
+	margin-right: 22.5px;
 	padding: 36px;
-	border-radius: 28px;
-	background: rgba(255,255,255,.72);
-	border: 1px solid rgba(0,0,0,.08);
-	transition:
-		transform .25s ease,
-		box-shadow .25s ease;
 }
-
-.service_card:hover {
-	transform: translateY(-6px);
-	box-shadow: 0 20px 40px rgba(0,0,0,.08);
+#service .service_list:nth-child(3n+3) {
+	margin-right: 0;
 }
-
-.service_icon {
-	width: 72px;
-	height: 72px;
+#service .service_icon {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	font-size: 84px;
+	color: #4e4e4e;
 	margin-bottom: 40px;
-	border-radius: 50%;
-	background: rgba(0,0,0,.06);
-	font-size: 28px;
 }
-.service_number {
-	font-size: 13px;
-	letter-spacing: .12em;
-	opacity: .45;
-	margin-bottom: 60px;
-}
-
-.service_card h3 {
+#service .service_title {
 	font-size: 30px;
-	line-height: 1.2;
-	margin-bottom: 16px;
 }
-
-.service_label {
-	font-size: 14px;
+#service .service_label {
+	font-size: 15px;
 	font-weight: 700;
 	margin-bottom: 20px;
 }
-
-.service_text {
-	font-size: 15px;
+#service .service_text {
+	font-size: 14px;
 	line-height: 1.9;
 	opacity: .72;
 }

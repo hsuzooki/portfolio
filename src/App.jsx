@@ -83,19 +83,18 @@ function App() {
 
 			<section id="service" className="service fadeIn">
 				<h2 className="section_title">Service</h2>
-
-				<div className="service_grid">
+				<ul className="service_lists">
 					{services.map((service) => (
-					<article className="service_card" key={service.title}>
-						<div className="service_icon">
-							<FontAwesomeIcon icon={service.icon} />
-						</div>
-						<h3>{service.title}</h3>
-						<p className="service_label">{service.label}</p>
-						<p className="service_text">{service.text}</p>
-					</article>
+						<li className="service_list" key={service.title}>
+							<div className="service_icon">
+								<FontAwesomeIcon icon={service.icon} />
+							</div>
+							<h3 className="service_title">{service.title}</h3>
+							<p className="service_label">{service.label}</p>
+							<p className="service_text">{service.text}</p>
+						</li>
 					))}
-				</div>
+				</ul>
 			</section>
 
 			<section id="works" className="works fadeIn">
